@@ -7,7 +7,7 @@ echo "#                                      #"
 echo "########################################"
 echo ""
 echo ""
-read -p "Are you sure? " -n 1 -r
+read -p "Are you sure?[y/N]" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     clear
