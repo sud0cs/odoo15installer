@@ -7,10 +7,10 @@ echo "#                                      #"
 echo "########################################"
 echo ""
 echo ""
-read -p "Do you want to proceed with the install?[y/N]" install
-clear
-if [[ $install =~ ^[Yy]$]]
+read -p "Are you sure? " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
+    clear
     echo Updating...
     echo ""
     sudo apt update > /dev/null
@@ -41,3 +41,4 @@ then
     wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -O pdf.deb
     sudo dpkg -i "/home/$(whoami)/pdf.deb"
     "/home/$(whoami)/odoo/odoo-bin"
+fi
