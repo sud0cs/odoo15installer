@@ -22,7 +22,7 @@ then
         clear
         echo ""
         echo Installing Python and Postgres...
-        sudo apt-get install python3 python3-pip postgresql postgresql-client git -yq > /dev/null
+        sudo apt-get install python3 python3-pip python3-venv postgresql postgresql-client git -yq > /dev/null
         clear
         echo Downloading Odoo...
         git clone https://github.com/Odoo/odoo.git --depth 1 --branch 15.0 --single-branch odoo > /dev/null
@@ -39,7 +39,7 @@ then
         clear
         echo Installing required Python packages...
         pip3 install setuptools wheel
-        pip3 install -r "/home/$(whoami)/odoo/requirements.txt"
+        python3 -m venv odoovenv
         pip3 install setuptools wheel
         pip3 install -r "/home/$(whoami)/odoo/requirements.txt"
         wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -O "/home/$(whoami)/pdf.deb"
