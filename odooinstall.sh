@@ -45,6 +45,7 @@ then
         pip3 install -r "/home/$(whoami)/odoo/requirements.txt" > /dev/null
         wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -O "/home/$(whoami)/pdf.deb" > /dev/null
         sudo dpkg -i "/home/$(whoami)/pdf.deb" > /dev/null
-        "/home/$(whoami)/odoo/odoo-bin"
+        clear
+        echo "to execute odoo run the /home/$(whoami)/odoo/odoo-bin file"
     fi  
 fi
