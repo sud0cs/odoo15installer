@@ -11,7 +11,7 @@ then
     echo "########################################"
     echo ""
     echo ""
-    read -p "Do you really want to proceed installing Odoo on the user $(whoami)[y/N]? " -n 1 -r
+    read -p "Do you really want to proceed installing Odoo on the user $(whoami)?[y/N] " -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
         clear
@@ -39,8 +39,8 @@ then
         clear
         echo Installing required Python packages...
         pip3 install setuptools wheel > /dev/null
-        python3 -m venv odoovenv > /dev/null
-        source odoovenv/bin/activate > /dev/null
+        python3 -m venv /home/$(whoami)/odoo/odoovenv > /dev/null
+        source /home/$(whoami)/odoo/odoovenv/bin/activate > /dev/null
         pip3 install setuptools wheel > /dev/null
         pip3 install -r "/home/$(whoami)/odoo/requirements.txt" > /dev/null
         wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -O "/home/$(whoami)/pdf.deb" > /dev/null
