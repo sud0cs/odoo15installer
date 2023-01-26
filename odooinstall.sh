@@ -6,12 +6,12 @@ then
     echo 
     echo "########################################"
     echo "#                                      #"
-    echo "#        WELCOME TO ODOOINSTALL        #"
+    echo "#    WELCOME TO THE ODOO INSTALLER     #"
     echo "#                                      #"
     echo "########################################"
     echo ""
     echo ""
-    read -p "Do you want to proceed installing Odoo on the user $(whoami)[y/N]? " -n 1 -r
+    read -p "Do you really want to proceed installing Odoo on the user $(whoami)[y/N]? " -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
         clear
