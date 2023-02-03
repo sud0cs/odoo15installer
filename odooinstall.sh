@@ -46,6 +46,9 @@ then
         wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -O "/home/$(whoami)/pdf.deb" > /dev/null
         sudo dpkg -i "/home/$(whoami)/pdf.deb" > /dev/null
         clear
-        echo "to execute odoo run the /home/$(whoami)/odoo/odoo-bin file"
+        echo "HOW TO EXECUTE ODOO:"
+        echo ""
+        echo "source /home/$(whoami)/odoo/odoovenv/bin/activate"
+        echo "/home/$(whoami)/odoo/./odoo-bin
     fi  
 fi
